@@ -1,19 +1,42 @@
 name: deploy-to-Firebase-Hosting
 
 on:
-  push
+  push:
+    branches:
+      - master
 
 jobs:
-  deploy-to-Firebase-Hosting:
-    name: deployment
+  build:
+    name: build-react-app
     runs-on: ubuntu-latest
     
     steps:
-      - name: Build the project
-        run: npm run build
-      
       - name: Checkout the repository
         uses: actions/checkout@master
+        
+      - name: Install Dependencies
+        run: npm install
+        
+      - name: Build the React app
+        run: npm run build
+      
+      - name: Archive Production Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: build
+          path: build
+        
+  deploy:
+    name: deploy-to-firebase
+    needs: build
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Download Artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: build
+          path: build
       
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
