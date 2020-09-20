@@ -6,8 +6,8 @@ on:
       - master
 
 jobs:
-  build:
-    name: build-react-app
+  build-and-deploy:
+    name: build-and-deploy
     runs-on: ubuntu-latest
     
     steps:
@@ -26,17 +26,17 @@ jobs:
           name: build
           path: build
         
-  deploy:
-    name: deploy-to-firebase
-    needs: build
-    runs-on: ubuntu-latest
+#   deploy:
+#     name: deploy-to-firebase
+#     needs: build
+#     runs-on: ubuntu-latest
     
-    steps:
-      - name: Download Artifact
-        uses: actions/download-artifact@v2
-        with:
-          name: build
-          path: build
+#     steps:
+#       - name: Download Artifact
+#         uses: actions/download-artifact@v2
+#         with:
+#           name: build
+#           path: build
       
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
