@@ -10,8 +10,8 @@ function App() {
 		<Router>
 			<NavBar />
 			<div className="App">
-				<Route path="/login" exact component={Login}></Route>
-				<Route path="/register" exact component={Register}></Route>
+				<Route exact path="/login" component={Login}></Route>
+				<Route exact path="/register" component={Register}></Route>
 			</div>
 		</Router>
 	);
