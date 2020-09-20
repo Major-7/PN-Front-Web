@@ -1,0 +1,23 @@
+name: deploy-to-Firebase-Hosting
+
+on:
+  push
+
+jobs:
+  deploy-to-Firebase-Hosting:
+    name: deployment
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Build the project
+        run: npm run build
+      
+      - name: Checkout the repository
+        uses: actions/checkout@master
+      
+      - name: Deploy to Firebase
+        uses: w9jds/firebase-action@master
+        with:
+          args: deploy --only hosting
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
