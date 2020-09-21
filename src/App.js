@@ -1,9 +1,9 @@
 import React from "react";
 import "./App.css";
-import Login from "./Login";
-import Register from "./Register";
+import Login from "./components/Login";
+import Register from "./components/Register";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import NavBar from "./navbar";
+import NavBar from "./components/navbar";
 
 function App() {
 	return (
