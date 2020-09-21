@@ -12,19 +12,17 @@
     display: flex;
     width: 100%;
     height: 90%;
-    border: 2px solid salmon;
 }
 
 .img-container{
     width: 50%;
-    height: 90vh;
+    height: 90.5vh;
     background-image: url(https://firebasestorage.googleapis.com/v0/b/ait-application-suite.appspot.com/o/Assets_Web%2FGroup%2014.png?alt=media&token=aa8e3bbb-e401-40b9-b3f8-2d8036cfda3d);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .div-right-container{
-    border: 1px solid springgreen;
     display: flex;
     flex-direction: column;
     width: 50%;
