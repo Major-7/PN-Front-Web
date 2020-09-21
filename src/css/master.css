@@ -59,3 +59,23 @@ margin: 2rem;
 .labelEmail{
     margin-left: 1rem;
 }
+
+.div-right-container .textContainer{
+    width: 70%;
+    text-align: center;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.div-right-container .textContainer img{
+    margin: 1rem;
+    height: 50px;
+    width: 50px;
+
+}
+
+.div-right-container .textContainer h6 span{
+    color: tomato;
+    text-decoration: underline;
+    cursor: pointer;
+}
