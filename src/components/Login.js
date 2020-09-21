@@ -30,7 +30,9 @@ function Login() {
 								className="btn-login"
 								value="Login"
 							></input>
-							<span className="left-align">Forgot Password?</span>
+							<Link to="/forgotPassword">
+								<span className="left-align">Forgot Password?</span>
+							</Link>
 						</div>
 						<h5>
 							Create an account?
