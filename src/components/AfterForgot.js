@@ -8,7 +8,7 @@ export default class AfterForgot extends Component {
                 <div className="img-container"></div>
                 <div className="div-right-container">
                     <div className="textContainer">
-                        <img src="https://www.flaticon.com/svg/static/icons/svg/564/564619.svg"></img>
+                        <img src="https://www.flaticon.com/svg/static/icons/svg/564/564619.svg" alt="Platinum Notifier"></img>
                         <p>A Password reset link has been sent your registered mail. Please click on that link to reset your password.</p>
                         <h6>Didn't Received? <span>Click Here</span></h6>
                     </div>

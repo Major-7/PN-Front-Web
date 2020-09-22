@@ -8,7 +8,7 @@ export default class Verified extends Component {
                 <div className="img-container"></div>
                 <div className="div-right-container">
                     <div className="textContainer">
-                        <img src="https://www.flaticon.com/svg/static/icons/svg/992/992481.svg"></img>
+                        <img src="https://www.flaticon.com/svg/static/icons/svg/992/992481.svg" alt="Platinum Notifier"></img>
                         <p>Your email has been verified. Now you can login to your main application.</p>
                         <h6>Please Login. <span>Click Here</span></h6>
                     </div>

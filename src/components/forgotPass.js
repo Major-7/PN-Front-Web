@@ -8,7 +8,7 @@ export default class Forgot extends Component {
                 <div className="div-right-container">
                     <h1>Forgot Password</h1>
                     <form>
-                        <label className="labelEmail" for="emailField">Email Address</label>
+                        <label className="labelEmail" htmlFor="emailField">Email Address</label>
                         <input type="email" id="emailField" className="inp-field"></input>
                         <input type="submit" className="btn-field" value="SUBMIT"/>
                     </form>

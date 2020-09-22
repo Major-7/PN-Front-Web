@@ -9,7 +9,7 @@ function Login() {
 					<div className="loginBox">
 						<h1>LOGIN</h1>
 						<div className="inputLabels">
-							<label for="email" className="label4input">
+							<label htmlFor="email" className="label4input">
 								Email
 							</label>
 							<input
@@ -17,7 +17,7 @@ function Login() {
 								id="email"
 								className="inputField"
 							/>
-							<label for="password">Password</label>
+							<label htmlFor="password">Password</label>
 							<input
 								type="password"
 								id="password"
