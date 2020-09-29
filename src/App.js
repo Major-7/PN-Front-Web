@@ -1,34 +1,29 @@
 import React from "react";
-import "./App.css";
-import Login from "./components/Login";
-import Register from "./components/Register";
+import { Router } from "@reach/router";
 import UserProvider from "./providers/UserProvider";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Login from "./components/Login";
 import NavBar from "./components/navbar";
+import Register from "./components/Register";
 import Forgot from "./components/forgotPass";
 import Reset from "./components/Reset";
 import Verify from "./components/VerifyEmail";
 import Verified from "./components/VerifiedEmail";
 import AfterForgot from "./components/AfterForgot"
+import "./App.css";
 
 function App() {
 	return (
 		<UserProvider>
+			<NavBar />
 			<Router>
-				<NavBar />
-				<div className="App">
-					<Switch>
-						<Route exact path="/login" component={Login}></Route>
-						<Route exact path="/register" component={Register}></Route>
-						<Route exact path="/forgotPassword" component={Forgot}></Route>
-						<Route exact path="/AfterForgot" component={AfterForgot}></Route>
-						<Route exact path="/resetPassword" component={Reset}></Route>
-						<Route exact path="/verifyEmail" component={Verify}></Route>
-						<Route exact path="/verifiedEmail" component={Verified}></Route>
-
-						<Route path="/" component={Login}></Route>
-					</Switch>
-				</div>
+				<Login path="/" />
+				<Login path="/login" />
+				<Register path="/register"></Register>
+				<Forgot exact path="/forgotPassword"></Forgot>
+				<AfterForgot exact path="/AfterForgot"></AfterForgot>
+				<Reset exact path="/resetPassword"></Reset>
+				<Verify exact path="/verifyEmail"></Verify>
+				<Verified exact path="/verifiedEmail"></Verified>
 			</Router>
 		</UserProvider>
 

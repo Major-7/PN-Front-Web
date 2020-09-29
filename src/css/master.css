@@ -85,6 +85,7 @@ margin: 2rem;
 .error-msg{
     color:red;
     text-align: center;
+    width: 90%;
 }
 @media screen and (max-width:1054px){
     .img-container{
