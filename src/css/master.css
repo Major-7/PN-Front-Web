@@ -82,6 +82,10 @@ margin: 2rem;
     cursor: pointer;
 }
 
+.error-msg{
+    color:red;
+    text-align: center;
+}
 @media screen and (max-width:1054px){
     .img-container{
         background-size: contain;
