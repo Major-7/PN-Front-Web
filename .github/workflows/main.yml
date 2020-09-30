@@ -1,7 +1,7 @@
-name: deploy-to-Firebase-Hosting
+name: firebase-deployment
 
 on:
-  push:
+  pull_request:
     branches:
       - master
 
@@ -20,11 +20,18 @@ jobs:
       - name: Build the React app
         run: npm run build
       
-      - name: Archive Production Artifact
-        uses: actions/upload-artifact@v2
+      - name: Deploy to Firebase
+        uses: w9jds/firebase-action@master
         with:
-          name: build
-          path: build
+          args: deploy --only hosting
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+
+#       - name: Archive Production Artifact
+#         uses: actions/upload-artifact@v2
+#         with:
+#           name: build
+#           path: build
         
 #   deploy:
 #     name: deploy-to-firebase
@@ -37,10 +44,3 @@ jobs:
 #         with:
 #           name: build
 #           path: build
-      
-      - name: Deploy to Firebase
-        uses: w9jds/firebase-action@master
-        with:
-          args: deploy --only hosting
-        env:
-          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
