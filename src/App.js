@@ -10,6 +10,8 @@ import Reset from "./components/Reset";
 import Verify from "./components/VerifyEmail";
 import Verified from "./components/VerifiedEmail";
 import AfterForgot from "./components/AfterForgot";
+import Details from "./screens/Details";
+import Review from "./components/Details-Input/Review"
 import "./App.css";
 
 import { store } from "./reduxStore/store";
@@ -28,6 +30,12 @@ function App() {
           <Reset exact path="/resetPassword"></Reset>
           <Verify exact path="/verifyEmail"></Verify>
           <Verified exact path="/verifiedEmail"></Verified>
+          <Details exact path="/details-1"></Details>
+          <Details exact path="/details-2"></Details>
+          <Details exact path="/details-3"></Details>
+          <Review exact path="/review"></Review>
+
+
         </Router>
       </UserProvider>
     </Provider>
