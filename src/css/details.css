@@ -100,3 +100,13 @@ hr{
     justify-content: center;
     height: 92vh;
 }
+
+.sm-field{
+    width: 7rem!important;
+}
+
+.mr-2r{
+    margin-top: 2rem!important;
+    margin-bottom: 2rem!important;
+
+}

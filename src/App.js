@@ -12,6 +12,9 @@ import Verified from "./components/VerifiedEmail";
 import AfterForgot from "./components/AfterForgot";
 import Details from "./screens/Details";
 import Review from "./components/Details-Input/Review"
+import Education from "./screens/Education";
+import Socials from "./screens/Socials";
+
 import "./App.css";
 
 import { store } from "./reduxStore/store";
@@ -31,10 +34,9 @@ function App() {
           <Verify exact path="/verifyEmail"></Verify>
           <Verified exact path="/verifiedEmail"></Verified>
           <Details exact path="/details-1"></Details>
-          <Details exact path="/details-2"></Details>
-          <Details exact path="/details-3"></Details>
+          <Education exact path="/details-2"></Education>
+          <Socials exact path="/details-3"></Socials>
           <Review exact path="/review"></Review>
-
 
         </Router>
       </UserProvider>
