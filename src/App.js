@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import { useState } from "react";
-import { TextField, Button, makeStyles, Container, Select, MenuItem, FormHelperText, FormControl, InputLabel } from "@material-ui/core";
+import { TextField, Button, makeStyles, Container, Select, MenuItem, FormControl, InputLabel } from "@material-ui/core";
 import Search from "@material-ui/icons/Search";
 
 const useStyles = makeStyles(theme => ({
@@ -37,8 +37,6 @@ function App() {
 	const [queryYEAR, setQueryYEAR] = useState("");
 	const [queryBRANCH, setQueryBRANCH] = useState("");
 	const [querySPEC, setQuerySPEC] = useState("");
-	const [students, setStudents] = useState([]);
-	const [error, setError] = useState(null);
 
 	const classes = useStyles();
 
@@ -128,11 +126,6 @@ function App() {
 					</Button>
 				</Container>
 			</form>
-			{students.email && (
-				<p>
-					<strong>Email : </strong> {students.email}
-				</p>
-			)}
 		</div>
 	);
 }
