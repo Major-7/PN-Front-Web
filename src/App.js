@@ -45,7 +45,7 @@ function App() {
 			alert("select atleast one filter");
 			return;
     }
-    window.location.assign(`http://localhost:5001/ait-application-suite/asia-east2/getEligibleP1B?cgpa=${queryCGPA}&year=${queryYEAR}&branch=${queryBRANCH}&spec=${querySPEC}`);
+    window.location.assign(`http://localhost:5000/ait-application-suite/asia-east2/getEligibleP1B?cgpa=${queryCGPA}&year=${queryYEAR}&branch=${queryBRANCH}&spec=${querySPEC}`);
 	};
 
 	const handleCgpaChange = (evt) => {
